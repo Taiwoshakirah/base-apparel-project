@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  --Linear: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --Linear: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--Dark-Grayish-Red);
+}
+
+.announce {
+  color: var(--Desaturated-Red);
+}
+small {
+  color: var(--Desaturated-Red);
+  
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.wrapper input {
+  width: 100%;
+  border: 1px solid;
+  padding: 10px 20px;
+  border-radius: 24px;
+}
+
+.wrapper img {
+  position: absolute;
+  right: 80px;
+  top: 10px;
+  display: none;
+}
+
+.wrapper button {
+  padding: 12px 40px;
+  position: absolute;
+  right: -20px;
+  top: 0px;
+  background-color: var(--Desaturated-Red);
+}
+
+form small {
+  display: none;
+}
+
+.reduce {
+  width: 100%;
+}
+
+.general {
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  margin: 0px auto;
+}
+
+@media (width>600px) {
+  .general {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* flex-direction: row-reverse; */
+    max-width: 800px;
+    margin-top: 50px;
+    width: 90%;
+    height: 410px;
+    position: relative;
+  }
+  .pad {
+    position: absolute;
+    left: -40px;
+    top: 20px;
+    max-width: 350px;
+    width: 90%;
+    margin: 20px 40px;
+    padding: 200px 0;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  .reduce {
+    float: right;
+    height: 409px;
+    width: 410px;
+  }
+  .logo {
+    margin-bottom: 30px;
+  }
+}
+
+.pad {
+  padding: 20px;
+}
+
+.small-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.wrapper img.show {
+  display: block;
+}
+
+.wrapper input.show {
+  border: 2px solid var(--Desaturated-Red);
+}
